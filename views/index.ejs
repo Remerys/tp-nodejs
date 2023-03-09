@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
+    </head>
+
+    <body>
+        <table class="table" data-toggle="table" data-url="/series" data-search="true" data-pagination="true" data-show-columns="true">
+            <thead>
+                <tr>
+                    <th data-field="id" data-sortable="true" >ID</th>
+                    <th data-field="titre" data-sortable="true">Titre</th>
+                    <th data-field="resume">Resume</th>
+                    <th data-field="duree">Duree</th>
+                    <th data-field="premiereDiffusion">PremiereDiffusion</th>
+                    <th data-field="image" data-formatter="genericFm">Image</th>
+                </tr>
+            </thead>
+        </table>
+    </body>
+</html>
+
+<script>
+    function genericFm(value, row, index, field) {
+        return '<img src="'+value+'" width=200>';
+    }
+</script>
